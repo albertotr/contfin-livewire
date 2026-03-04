@@ -1,0 +1,14 @@
+# Build e start dos containers
+docker-compose up -d --build
+
+# Instalar dependências do Laravel
+docker-compose exec app composer install
+
+# Gerar chave da aplicação
+docker-compose exec app php artisan key:generate
+
+# Rodar migrations
+docker-compose exec app php artisan migrate
+
+# Criar link simbólico para storage
+docker-compose exec app php artisan storage:link

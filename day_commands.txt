@@ -1,0 +1,14 @@
+# Iniciar containers (após já ter feito build)
+docker-compose up -d
+
+# Parar containers
+docker-compose down
+
+# Ver logs
+docker-compose logs -f
+
+# Acessar o container da aplicação
+docker-compose exec app bash
+
+# Rodar fila do Laravel
+docker-compose exec app php artisan queue:work
