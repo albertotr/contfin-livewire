@@ -5,6 +5,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig(({ command, mode }) => {
     const isProduction = mode === "production";
 
+    console.log("🔧 Vite config - Mode:", mode);
+    console.log("🔧 Vite config - isProduction:", isProduction);
+    console.log("🔧 Vite config - Command:", command);
+
     return {
         plugins: [
             laravel({
