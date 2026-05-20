@@ -1,4 +1,5 @@
-<div class="dark:bg-zinc-800/80 backdrop-blur rounded-2xl p-6 shadow-lg border dark:border-zinc-700/50 w-full max-w-md">
+<div class="dark:bg-zinc-800/80 backdrop-blur rounded-2xl p-6 shadow-lg border dark:border-zinc-700/50 w-full max-w-md"
+    wire:click="loadAccountBalance({{ $account->id }})">
 
     <!-- Header -->
     <div class="flex items-start justify-between mb-4">
