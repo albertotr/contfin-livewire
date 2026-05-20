@@ -25,11 +25,17 @@ export default defineConfig(({ command, mode }) => {
                 port: 5173,
                 strictPort: true,
                 cors: {
-                    origin: ["http://localhost:8000", "http://localhost:5173"],
+                    origin: [
+                        "http://localhost:8000",
+                        "http://localhost:5173",
+                        "http://192.168.1.84:5173",
+                        "http://192.168.1.84:8000",
+                        "http://contfin.test",
+                    ],
                     credentials: true,
                 },
                 hmr: {
-                    host: "localhost",
+                    host: "192.168.1.84",
                     protocol: "ws",
                     clientPort: 5173,
                 },
