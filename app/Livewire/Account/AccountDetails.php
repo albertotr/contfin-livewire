@@ -20,9 +20,9 @@ class AccountDetails extends Component
     }
 
     #[On('showAccountBalance')]
-    public function loadAccount($accountId)
+    public function loadAccount(Account $account)
     {
-        $this->account = Account::find($accountId);
+        $this->account = $account;
     }
 
     public function render()

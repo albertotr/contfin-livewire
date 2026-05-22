@@ -10,16 +10,16 @@ class AccountPanel extends Component
 
     public $account;
 
-    public function mount($account)
+    public function mount(Account $account)
     {
-        $this->account = Account::find($account);
+        $this->account = $account;
     }
 
-    public function loadAccountBalance($accountId)
+    public function loadAccountBalance(Account $account)
     {
         $this->dispatch(
             'showAccountBalance',
-            accountId: $accountId
+            account: $account
         );
     }
 

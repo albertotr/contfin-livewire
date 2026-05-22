@@ -8,12 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Account extends Model
 {
-    /** @use HasFactory<\Database\Factories\AccountFactory> */
     use HasFactory, SoftDeletes;
 
     protected $fillable = ['name', 'balance', 'estimate'];
 
-    protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = ['created_at', 'deleted_at', 'updated_at'];
 
     public function records()
     {
